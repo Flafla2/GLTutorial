@@ -1,0 +1,30 @@
+{
+	"folders":
+	[
+		{
+			"path": "."
+		}
+	],
+	"build_systems":
+    [
+        {
+            "name": "gltutorial",
+            "cmd": ["mkdir build && cd build && cmake .. && make"],
+            "working_dir": "$project_path",
+            "selector": "source.c++",
+            "shell": true,
+            "variants": [
+            	{
+                    "name": "Clean",
+                    "working_dir": "$project_path",
+                    "cmd": ["rm -r build"]
+                },
+                {
+                	"name": "Run",
+                	"working_dir": "$project_path/build/bin",
+                	"cmd": "./GLTutorial"
+                }
+            ]
+        }
+    ]
+}
