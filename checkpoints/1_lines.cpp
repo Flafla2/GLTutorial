@@ -16,6 +16,21 @@
 void render(double current_time, GraphicsManager *gm) {
 	/** Drawing Code Goes Here! **/
 
+	/** 1. Drawing lines, and lines with thickness **/
+	glColor4f(1.0f, 1.0f, 1.0f, 1.0f);
+	glLineWidth(1.0f);
+	glBegin(GL_LINES);
+		glVertex3f(-0.5f, 0, 0);
+		glVertex3f(0.5f, 0, 0);
+	glEnd();
+
+	glLineWidth(5.0f);
+	glBegin(GL_LINES);
+		glColor4f(1.0f, 0, 0, 1.0f);
+		glVertex3f(-0.2f, -0.4, 0);
+		glColor4f(0, 0, 1.0f, 1.0f);
+		glVertex3f(0.2f, 0.4, 0);
+	glEnd();
 }
 
 int main(int argc, char **argv) {

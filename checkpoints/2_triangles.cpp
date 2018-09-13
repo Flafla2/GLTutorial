@@ -16,6 +16,17 @@
 void render(double current_time, GraphicsManager *gm) {
 	/** Drawing Code Goes Here! **/
 
+	/** 2. Drawing Triangles w/ Color **/
+	glBegin(GL_TRIANGLES);
+		glVertex3f(-0.5f, -0.5f, 0);
+		glVertex3f(-0.5f, 0.5f, 0);
+		glVertex3f(0.5f, -0.5f, 0);
+
+		//glColor4f(0.0f, 1.0f, 1.0f, 1.0f);
+		glVertex3f(-0.5f, 0.5f, 0);
+		glVertex3f(0.5f, 0.5f, 0);
+		glVertex3f(0.5f, -0.5f, 0);
+	glEnd();
 }
 
 int main(int argc, char **argv) {
