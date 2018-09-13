@@ -20,12 +20,17 @@
                     "cmd": ["rm -r build"]
                 },
                 {
-                	"name": "teapot",
+                    "name": "run",
+                    "working_dir": "$project_path/build/bin",
+                    "cmd": "./GLTutorial"
+                },
+                {
+                	"name": "teapot.obj",
                 	"working_dir": "$project_path/build/bin",
                 	"cmd": "./GLTutorial ../../obj/utah-teapot.obj"
                 },
                 {
-                    "name": "circle",
+                    "name": "circle.obj",
                     "working_dir": "$project_path/build/bin",
                     "cmd": "./GLTutorial ../../obj/circle.obj"
                 }
