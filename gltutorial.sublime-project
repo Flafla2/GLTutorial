@@ -9,7 +9,7 @@
     [
         {
             "name": "gltutorial",
-            "cmd": ["mkdir build && cd build && cmake .. && make"],
+            "cmd": ["(mkdir build || true) && cd build && cmake .. && make"],
             "working_dir": "$project_path",
             "selector": "source.c++",
             "shell": true,
@@ -20,9 +20,14 @@
                     "cmd": ["rm -r build"]
                 },
                 {
-                	"name": "Run",
+                	"name": "teapot",
                 	"working_dir": "$project_path/build/bin",
-                	"cmd": "./GLTutorial"
+                	"cmd": "./GLTutorial ../../obj/utah-teapot.obj"
+                },
+                {
+                    "name": "circle",
+                    "working_dir": "$project_path/build/bin",
+                    "cmd": "./GLTutorial ../../obj/circle.obj"
                 }
             ]
         }

@@ -5,12 +5,15 @@ file(GLOB Sources "*.cpp")
 set(MY_HEADER_FILES
   ${MY_HEADER_FILES}
   GraphicsManager.hpp
+  Color.hpp
+  Mesh.hpp
 )
 
 set(MY_SOURCE_FILES
   ${MY_SOURCE_FILES}
   main.cpp
   GraphicsManager.cpp
+  Mesh.cpp
 )
 
 add_executable(GLTutorial
@@ -19,5 +22,4 @@ add_executable(GLTutorial
 )
 
 target_link_libraries(GLTutorial glfw)
-target_link_libraries(GLTutorial ${OPENGL_gl_LIBRARY})
-target_link_libraries(GLTutorial ${OPENGL_gl_LIBRARY} glfw)
+target_link_libraries(GLTutorial ${OPENGL_gl_LIBRARY} glfw glm)
