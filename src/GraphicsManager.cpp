@@ -22,23 +22,12 @@ bool GraphicsManager::execute() {
     }
 
     glfwMakeContextCurrent(window);
-    glfwGetCursorPos(window, &last_mx, &last_my);
 
     while (!glfwWindowShouldClose(window))
     {
         glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
         glClearColor(0.2f, 0.2f, 0.3f, 1.f);
         glLoadIdentity();
-
-        // handle looking mechanics
-        double xpos, ypos;
-        glfwGetCursorPos(window, &xpos, &ypos);
-        double difx = xpos - last_mx;
-        double dify = ypos - last_my;
-        last_mx = xpos;
-        last_my = ypos;
-
-        rot = rot * glm::quat(glm::vec3(dify, difx, 0) * 0.1f);
 
         render_fn(glfwGetTime(), this);
 

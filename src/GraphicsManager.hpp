@@ -32,10 +32,5 @@ private:
 	int gl_major_version = 2;
 	int gl_minor_version = 1;
 
-	double last_mx = 0;
-	double last_my = 0;
-	glm::vec3 pos;
-	glm::quat rot;
-
 	Color clear_color = Color(1.0f,1.0f,1.0f,1.0f);
 };
