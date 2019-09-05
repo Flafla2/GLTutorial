@@ -26,7 +26,7 @@ bool GraphicsManager::execute() {
     while (!glfwWindowShouldClose(window))
     {
         glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
-        glClearColor(0.2f, 0.2f, 0.3f, 1.f);
+        glClearColor(clear_color.r, clear_color.g, clear_color.b, clear_color.a);
         glLoadIdentity();
 
         render_fn(glfwGetTime(), this);

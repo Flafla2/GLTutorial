@@ -32,5 +32,5 @@ private:
 	int gl_major_version = 2;
 	int gl_minor_version = 1;
 
-	Color clear_color = Color(1.0f,1.0f,1.0f,1.0f);
+	Color clear_color = Color(0.2f, 0.2f, 0.3f, 1.0f);
 };
